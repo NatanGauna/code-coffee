@@ -1,0 +1,421 @@
+/* 1. VARIÁVEIS */
+:root {
+    --cor-principal: #2c1e1a;  /* Café Escuro */
+    --cor-secundaria: #d4a373; /* Café Claro */
+    --cor-botao: #606c38;      /* Verde Tech */
+    --fundo-claro: #f4f4f4;    /* Fundo */
+    --fundo-hero: #e9edc9;        /* Fundo hero */
+    --cor-menu: #ffffff;         /* Cor item menu */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+
+.menu a {
+    position: relative;
+    color: var(--cor-menu);
+    text-decoration: none;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+
+.menu a.ativo::after {
+    width: 100%;
+}
+
+
+body {
+    background-color: var(--fundo-claro);
+    color: #333; /* sem efeito*/
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor-principal);
+    align-items: center;
+    padding: 20px 40px;
+}
+
+
+nav a {
+    color: var(--cor-menu);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+main {
+    padding: 20px;
+}
+
+
+.logotipo {
+    color: var(--cor-secundaria); 
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.logotipo p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;    
+}
+
+
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 28px;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #6b7743, #8a9b55);
+
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+    transition: all 0.25s ease;
+}
+
+
+.btn-cta:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: #6b7743;
+    padding: 14px 30px;
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 
+        0 12px 30px rgba(0, 0, 0, 0.35),
+        0 0 15px rgba(138, 155, 85, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-cta:active {
+    transform: translateY(1px) scale(0.97);
+
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.25),
+        inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta,
+.btn-cta:visited,
+.btn-cta:hover,
+.btn-cta:active {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    border-image: 15px;
+    background-color: var(--fundo-hero);
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 50px;
+}
+
+
+.hero h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+.hero-sobre {
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.551),
+        rgba(0, 0, 0, 0.52)),
+        url("images/fachada-code-coffee.png");
+
+    background-size:cover;
+    background-position:center 20%;
+    background-repeat:no-repeat;
+    text-align:center;
+    padding:8rem 3rem;
+    border-radius:10px;
+}
+
+
+.hero-sobre h1{
+text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+color:white;}
+.hero-sobre p{
+color:white;
+text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+
+.hero-texto{
+   background: rgba(0, 0, 0, 0.447);
+   padding:30px;
+   border-radius:12px;
+   display:inline-block;
+}
+
+
+.hero-contato {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contato-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 230px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.275);
+}
+
+.info-box p {
+    font-size: 14px;
+    overflow-wrap: break-word;
+}
+
+.form-contato {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.form-contato h2{
+    padding: 20px;
+    text-shadow: 2px 2px 8px var(--cor-secundaria);
+    color:var(--cor-secundaria)
+}
+
+
+.form-contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-contato textarea {
+    height: 100px;
+}
+
+.btn-enviar {
+    margin-top: 10px;
+
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+
+    background: linear-gradient(135deg, #6b7743, #8a9b55);
+
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    /* sombra suave */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.2s ease;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+.btn-enviar:active {
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: 0px solid #cac8c8ef;
+    box-shadow: 0 10px 15px rgba(15, 15, 15, 0.364);
+}
+
+
+.card h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+
+.card p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+
+.card-content {
+    padding: 25px;
+}
+
+
+.card img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+}
+
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.grid-layout {
+    display: grid;
+    margin-top: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+}
+
+.img-sobre img{
+    margin: 35px auto; 
+    display: block;
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid #a67305ab;
+    box-shadow: 0 10px 15px rgba(15, 15, 15, 0.361);
+}
+
+
+.container-imagem {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+footer {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2.1;
+    background: var(--cor-principal);
+    color: var(--cor-menu);
+    text-align: center;
+    padding: 0 0 10px;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
